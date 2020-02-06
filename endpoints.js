@@ -20,6 +20,7 @@ router.get("/", async (req, res) => {
         res.status(200).json(subs.data);
     } catch (err) {
         console.log(err);
+        res.status(503).json(err.data);
     }
 });
 
